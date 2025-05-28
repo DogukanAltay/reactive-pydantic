@@ -2,11 +2,11 @@
 name = "reactive-pydantic"
 version = "0.1.0"
 description = "A library for creating reactive Pydantic models using RxPy."
-authors = ["Your Name <youremail@example.com>"]
+authors = ["Your Name <dogukan.altay@yahoo.com>"]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/yourusername/reactive-pydantic"
-repository = "https://github.com/yourusername/reactive-pydantic"
+homepage = "https://github.com/dogukanaltay/reactive-pydantic"
+repository = "https://github.com/dogukanaltay/reactive-pydantic"
 keywords = ["pydantic", "reactive", "rxpy", "observables"]
 
 [tool.poetry.dependencies]

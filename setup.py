@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 setup(
     name='reactive-pydantic',
     version='0.1.0',
-    author='Your Name',
-    author_email='your.email@example.com',
+    author='Dogukan Altay',
+    author_email='dogukan.altay@yahoo.com',
     description='A library for creating reactive Pydantic models using RxPy.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
