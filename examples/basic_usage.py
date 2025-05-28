@@ -1,14 +1,16 @@
 """Basic example of reactive Pydantic models."""
 
 import time
-from reactive_pydantic import ReactiveModel, ReactiveField
+
+import reactivex.operators as ops
+from reactive_pydantic import ReactiveModel, reactive_field
 from reactive_pydantic.operators import where_field, map_to_value
 
 class User(ReactiveModel):
     """A reactive user model."""
-    name: str = ReactiveField(default="")
-    age: int = ReactiveField(default=0)
-    email: str = ReactiveField(default="")
+    name: str = reactive_field(default="")
+    age: int = reactive_field(default=0)
+    email: str = reactive_field(default="")
 
 def main():
     """Demonstrate basic reactive functionality."""
@@ -19,6 +21,7 @@ def main():
     
     # Subscribe to field changes
     User.observe_field("name").pipe(
+        ops.distinct_until_changed(),
         map_to_value()
     ).subscribe(lambda value: name_changes.append(value))
     
@@ -32,6 +35,9 @@ def main():
     
     print("Modifying user...")
     user1.name = "Alice Smith"
+    user1.name = "Alice Smith"
+    user1.name = "Alices Smith"
+
     user1.age = 26
     
     # Create another user

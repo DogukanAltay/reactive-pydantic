@@ -650,18 +650,6 @@ files = [
 typing-extensions = ">=4.1.1,<5.0.0"
 
 [[package]]
-name = "rx"
-version = "3.2.0"
-description = "Reactive Extensions (Rx) for Python"
-optional = false
-python-versions = ">=3.6.0"
-groups = ["main"]
-files = [
-    {file = "Rx-3.2.0-py3-none-any.whl", hash = "sha256:922c5f4edb3aa1beaa47bf61d65d5380011ff6adcd527f26377d05cb73ed8ec8"},
-    {file = "Rx-3.2.0.tar.gz", hash = "sha256:b657ca2b45aa485da2f7dcfd09fac2e554f7ac51ff3c2f8f2ff962ecd963d91c"},
-]
-
-[[package]]
 name = "toml"
 version = "0.10.2"
 description = "Python Library for Tom's Obvious, Minimal Language"
@@ -716,4 +704,4 @@ typing-extensions = ">=4.12.0"
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.8"
-content-hash = "85862cd2fa8154c40c62eaa84a527defcc57847150da6b02423ab0bbb048c68f"
+content-hash = "4a9cc9d4d4b9a9e7f608f1f3a8bfec65764fe524766e4ea41517472bcdd3121f"

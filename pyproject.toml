@@ -12,7 +12,6 @@ keywords = ["pydantic", "reactive", "rxpy", "observables"]
 [tool.poetry.dependencies]
 python = "^3.8"
 pydantic = "^2.0.0"
-rx = "^3.0.1"
 reactivex = "^4.0.4"
 
 [tool.poetry.group.dev.dependencies]
