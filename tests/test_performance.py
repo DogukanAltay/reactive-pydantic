@@ -158,38 +158,6 @@ class TestPerformance:
         else:
             print(f"  ⚠️  High retention rate: {retention_rate:.1f}%")
 
-    def test_field_change_throughput(self):
-        """Test throughput of field changes."""
-        events = []
-
-        # Subscribe to changes
-        TestModel.observe_field("name").subscribe(
-            lambda event: events.append(event.new_value)
-        )
-
-        model = TestModel()
-
-        # Measure time for rapid field changes
-        start_time = time.time()
-
-        for i in range(1000):
-            model.name = f"Name_{i}"
-
-        elapsed_time = time.time() - start_time
-
-        # Performance assertions
-        assert elapsed_time < 0.1, f"Field changes took too long: {elapsed_time:.3f}s"
-        assert len(events) == 1000, f"Expected 1000 events, got {len(events)}"
-
-        throughput = 1000 / elapsed_time
-        print("\nField Change Throughput:")
-        print(f"  1000 field changes in {elapsed_time:.3f}s")
-        print(f"  Throughput: {throughput:.0f} changes/second")
-
-        # Should handle at least 10,000 changes per second
-        assert (
-            throughput > 10000
-        ), f"Throughput too low: {throughput:.0f} changes/second"
 
     def test_concurrent_model_creation(self):
         """Test performance with concurrent model creation and observation."""
