@@ -158,7 +158,6 @@ class TestPerformance:
         else:
             print(f"  ⚠️  High retention rate: {retention_rate:.1f}%")
 
-
     def test_concurrent_model_creation(self):
         """Test performance with concurrent model creation and observation."""
         all_events = []
