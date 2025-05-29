@@ -2,19 +2,19 @@
 
 """Reactive Pydantic - Reactive models using Pydantic and RxPY."""
 
-from .core import ReactiveModel, ReactiveField, reactive_field
+from .core import ReactiveField, ReactiveModel, reactive_field
 from .events import FieldChangeEvent, ModelEvent, ValidationEvent
-from .operators import where_field, where_model, debounce_changes
+from .operators import debounce_changes, where_field, where_model
 
 __all__ = [
     "ReactiveModel",
-    "ReactiveField", 
+    "ReactiveField",
     "reactive_field",
     "FieldChangeEvent",
     "ModelEvent",
     "ValidationEvent",
     "where_field",
-    "where_model", 
+    "where_model",
     "debounce_changes",
     "__version__",
 ]
